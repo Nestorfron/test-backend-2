@@ -17,6 +17,18 @@ module.exports = {
         },
         allowNull: false,
       },
+      ID_job_offer: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'JobOffers',
+          key: 'ID_offer',
+        },
+        allowNull: false,
+      },
+      type: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       message: {
         type: Sequelize.TEXT,
         allowNull: false,
@@ -25,7 +37,7 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
       },
-      status: {
+      read: {
         type: Sequelize.STRING,
         allowNull: false,
       },

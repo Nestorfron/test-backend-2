@@ -36,7 +36,7 @@ module.exports = {
       ID_modality: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Modalitys',
+          model: 'Modalities',
           key: 'ID_modality',
         },
         allowNull: false,
@@ -44,7 +44,7 @@ module.exports = {
       ID_job_category: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'JobCategorys',
+          model: 'JobCategories',
           key: 'ID_job_category',
         },
         allowNull: false,
@@ -52,7 +52,7 @@ module.exports = {
       ID_city: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Citys',
+          model: 'Cities',
           key: 'ID_city',
         },
         allowNull: false,

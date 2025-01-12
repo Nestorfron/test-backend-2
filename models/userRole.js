@@ -4,6 +4,11 @@ const User = require('./user');
 const Role = require('./role');
 
 const UserRole = sequelize.define('UserRole', {
+  ID_user_role: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
   ID_user: {
     type: DataTypes.INTEGER,
     references: {

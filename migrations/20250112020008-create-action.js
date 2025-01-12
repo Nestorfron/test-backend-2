@@ -9,16 +9,12 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true,
       },
-      description: {
-        type: Sequelize.TEXT,
-      },
-      action_type: {
+      name_action: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      date: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.NOW,
+      description_action: {
+        type: Sequelize.TEXT,
       },
     });
   },

@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const ApplicationStatus = sequelize.define('ApplicationStatus', {
-  ID_status: {
+  ID_application_status: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,

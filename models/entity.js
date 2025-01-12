@@ -15,7 +15,7 @@ const Entity = sequelize.define('Entity', {
     type: DataTypes.TEXT,
   },
 }, {
-  tableName: 'Entitys', // Table name in the database
+  tableName: 'Entities', // Table name in the database
   timestamps: false,
 });
 

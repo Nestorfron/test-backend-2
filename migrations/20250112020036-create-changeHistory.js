@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Change_Histories', {
+    await queryInterface.createTable('ChangeHistories', {
       ID_change: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -14,6 +14,22 @@ module.exports = {
         references: {
           model: 'Users',
           key: 'ID_user',
+        },
+        allowNull: false,
+      },
+      ID_entity: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Entities',
+          key: 'ID_entity',
+        },
+        allowNull: false,
+      },
+      ID_action: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Actions',
+          key: 'ID_action',
         },
         allowNull: false,
       },
@@ -29,6 +45,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Change_Histories');
+    await queryInterface.dropTable('ChangeHistories');
   }
 };

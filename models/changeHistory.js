@@ -35,11 +35,11 @@ const ChangeHistory = sequelize.define('ChangeHistory', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
   },
-  details: {
+  change_description: {
     type: DataTypes.TEXT,
   },
 }, {
-  tableName: 'ChangeHistoryes', // Table name in the database
+  tableName: 'ChangeHistories', // Table name in the database
   timestamps: false,
 });
 

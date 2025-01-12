@@ -12,7 +12,7 @@ const JobCategory = sequelize.define('JobCategory', {
     allowNull: false,
   },
 }, {
-  tableName: 'JobCategorys', // Table name in the database
+  tableName: 'JobCategories', // Table name in the database
   timestamps: false,
 });
 

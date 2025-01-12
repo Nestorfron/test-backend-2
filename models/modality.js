@@ -15,7 +15,7 @@ const Modality = sequelize.define('Modality', {
     type: DataTypes.TEXT,
   },
 }, {
-  tableName: 'Modalitys', // Table name in the database
+  tableName: 'Modalities', // Table name in the database
   timestamps: false,
 });
 

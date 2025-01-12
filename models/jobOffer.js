@@ -6,7 +6,7 @@ const Modality = require('./modality');
 const JobCategory = require('./jobCategory');
 
 const JobOffer = sequelize.define('JobOffer', {
-  ID_job_offer: {
+  ID_offer: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true
@@ -25,10 +25,10 @@ const JobOffer = sequelize.define('JobOffer', {
   description: {
     type: DataTypes.TEXT
   },
-  salary_min_range: {
+  salary_range_min: {
     type: DataTypes.DECIMAL
   },
-  salary_max_range: {
+  salary_range_max: {
     type: DataTypes.DECIMAL
   },
   publication_date: {

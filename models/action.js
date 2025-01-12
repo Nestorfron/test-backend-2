@@ -7,11 +7,10 @@ const Action = sequelize.define('Action', {
     primaryKey: true,
     autoIncrement: true,
   },
-  action_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+  name_action: {
+    type: DataTypes.TEXT,
   },
-  action_description: {
+  description_action: {
     type: DataTypes.TEXT,
   },
 }, {
