@@ -2,14 +2,16 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const usuarioRoutes = require('./routes/usruarioRoutes');
+const userRoutes = require('./routes/userRoutes');
+const actionRoutes = require('./routes/actionRoutes');
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json()); // Para poder manejar datos JSON en el cuerpo de la solicitud
+app.use(bodyParser.json());
 
 // Rutas
-app.use('/api/usuarios', usuarioRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/actions', actionRoutes);
 
 // Rutas de prueba
 app.get('/', (req, res) => {

@@ -3,46 +3,54 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Usuarios', {
-      ID_usuario: {
+    await queryInterface.createTable('Users', {
+      ID_user: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      nombre: {
+      name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      correo_electronico: {
+      email: {
         type: Sequelize.STRING,
         unique: true,
         allowNull: false,
       },
-      contraseña: {
+      password: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      estado: {
+      status: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      telefono: {
+      phone: {
         type: Sequelize.STRING,
       },
-      direccion: {
+      address: {
         type: Sequelize.TEXT,
       },
-      fecha_registro: {
+      ID_city: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Citys',
+          key: 'ID_city',
+        },
+        allowNull: false,
+      },
+      registration_date: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
       },
-      fecha_ultimo_acceso: {
+      last_access_date: {
         type: Sequelize.DATE,
       },
     });
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Usuarios');
+    await queryInterface.dropTable('Users');
   }
 };
