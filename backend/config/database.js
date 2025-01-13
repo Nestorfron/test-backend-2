@@ -1,8 +1,8 @@
 // config/database.js
+require('dotenv').config();
 
 const { Sequelize } = require('sequelize');
 
-require('dotenv').config();
 
 const sequelize = new Sequelize({
     username: process.env.DB_USERNAME,

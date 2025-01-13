@@ -2,20 +2,20 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const userRoutes = require('./routes/userRoutes');
-const actionRoutes = require('./routes/actionRoutes');
-const applicationStatusRoutes = require('./routes/applicationStatusRoutes');
-const changeHistoryRoutes = require('./routes/changeHistoryRoutes');
-const cityRoutes = require('./routes/cityRoutes');
-const countryRoutes = require('./routes/countryRoutes');
-const entityRoutes = require('./routes/entityRoutes');
-const jobApplicationRoutes = require('./routes/jobApplicationRoutes');
-const jobCategoryRoutes = require('./routes/jobCategoryRoutes');
-const jobOfferRoutes = require('./routes/jobOfferRoutes');
-const modalityRoutes = require('./routes/modalityRoutes');
-const notificationRoutes = require('./routes/notificationRoutes');
-const roleRoutes = require('./routes/roleRoutes');
-const userRoleRoutes = require('./routes/userRoleRoutes');
+const userRoutes = require('./backend/routes/userRoutes');
+const actionRoutes = require('./backend/routes/actionRoutes');
+const applicationStatusRoutes = require('./backend/routes/applicationStatusRoutes');
+const changeHistoryRoutes = require('./backend/routes/changeHistoryRoutes');
+const cityRoutes = require('./backend/routes/cityRoutes');
+const countryRoutes = require('./backend/routes/countryRoutes');
+const entityRoutes = require('./backend/routes/entityRoutes');
+const jobApplicationRoutes = require('./backend/routes/jobApplicationRoutes');
+const jobCategoryRoutes = require('./backend/routes/jobCategoryRoutes');
+const jobOfferRoutes = require('./backend/routes/jobOfferRoutes');
+const modalityRoutes = require('./backend/routes/modalityRoutes');
+const notificationRoutes = require('./backend/routes/notificationRoutes');
+const roleRoutes = require('./backend/routes/roleRoutes');
+const userRoleRoutes = require('./backend/routes/userRoleRoutes');
 
 // Middleware
 app.use(cors());
@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 });
 
 // Iniciar servidor
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Servidor en ejecución en el puerto ${PORT}`);
 });
