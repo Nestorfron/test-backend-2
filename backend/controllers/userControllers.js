@@ -13,7 +13,7 @@ const getAllUsers = async (req, res) => {
 
 // Create a new user
 const createUser = async (req, res) => {
-  const { name, email, password, status, phone, address, cityId } = req.body;
+  const { name, email, password, status, phone, address, ID_city } = req.body;
 
   try {
     const newUser = await User.create({
@@ -23,7 +23,7 @@ const createUser = async (req, res) => {
       status,
       phone,
       address,
-      cityId
+      ID_city,
     });
     res.status(201).json(newUser);
   } catch (error) {

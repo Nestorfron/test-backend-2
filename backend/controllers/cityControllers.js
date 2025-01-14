@@ -12,11 +12,13 @@ const getAllCities = async (req, res) => {
 
 // Create a new city
 const createCity = async (req, res) => {
-  const { name } = req.body;
+  const { name, ID_country } = req.body;
+
 
   try {
     const newCity = await City.create({
-      name
+      name,
+      ID_country,
     });
     res.status(201).json(newCity);
   } catch (error) {
